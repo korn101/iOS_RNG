@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomNumberGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marsaglia-Bray and Wichmann-Hill  Random Number Generation" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ung-iQ-kJ2">
+                                <rect key="frame" x="165" y="28" width="270" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrR-wv-1A6">
+                                <rect key="frame" x="70" y="97" width="460" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Generate Marsaglia"/>
+                                <connections>
+                                    <action selector="btnMarsaglia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJ4-UE-bGF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAK-Wn-f1Q">
+                                <rect key="frame" x="276" y="289" width="48" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Faw-5P-bRd">
+                                <rect key="frame" x="220" y="363" width="161" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="Anp-qW-zOu"/>
+                                    <constraint firstAttribute="height" constant="30" id="PSU-wW-6v1"/>
+                                </constraints>
+                                <state key="normal" title="Generate Wichmann"/>
+                                <connections>
+                                    <action selector="btnWichmann:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZY-rF-5kX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ung-iQ-kJ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2oK-XO-897"/>
+                            <constraint firstItem="DrR-wv-1A6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="84O-Rl-TzU"/>
+                            <constraint firstItem="Faw-5P-bRd" firstAttribute="top" secondItem="iAK-Wn-f1Q" secondAttribute="bottom" constant="53" id="8yB-az-dAh"/>
+                            <constraint firstItem="DrR-wv-1A6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cnm-Pn-ygs"/>
+                            <constraint firstItem="DrR-wv-1A6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="QU4-5M-sro"/>
+                            <constraint firstItem="DrR-wv-1A6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RKl-aS-npc"/>
+                            <constraint firstItem="DrR-wv-1A6" firstAttribute="top" secondItem="Faw-5P-bRd" secondAttribute="bottom" constant="8" id="T2q-hO-YRZ"/>
+                            <constraint firstItem="DrR-wv-1A6" firstAttribute="top" secondItem="Faw-5P-bRd" secondAttribute="bottom" constant="8" id="T9n-AM-l4j"/>
+                            <constraint firstItem="Faw-5P-bRd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TdZ-06-MMj"/>
+                            <constraint firstItem="iAK-Wn-f1Q" firstAttribute="top" secondItem="DrR-wv-1A6" secondAttribute="bottom" constant="8" id="Tns-Ml-2NS"/>
+                            <constraint firstItem="iAK-Wn-f1Q" firstAttribute="top" secondItem="DrR-wv-1A6" secondAttribute="bottom" constant="162" id="UZs-3L-P3E"/>
+                            <constraint firstItem="iAK-Wn-f1Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V9u-e6-v1g"/>
+                            <constraint firstItem="DrR-wv-1A6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-164" id="XTT-4B-pc4"/>
+                            <constraint firstItem="iAK-Wn-f1Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bU4-Em-8et"/>
+                            <constraint firstItem="Ung-iQ-kJ2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ci3-mH-Txx"/>
+                            <constraint firstItem="Faw-5P-bRd" firstAttribute="top" secondItem="iAK-Wn-f1Q" secondAttribute="bottom" constant="53.5" id="jPF-7i-OG1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Faw-5P-bRd" secondAttribute="bottom" constant="207" id="kH0-QA-NbB"/>
+                            <constraint firstItem="DrR-wv-1A6" firstAttribute="top" secondItem="Ung-iQ-kJ2" secondAttribute="bottom" constant="28" id="kc7-6P-wvY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="84O-Rl-TzU"/>
+                                <exclude reference="RKl-aS-npc"/>
+                                <exclude reference="T2q-hO-YRZ"/>
+                                <exclude reference="T9n-AM-l4j"/>
+                                <exclude reference="XTT-4B-pc4"/>
+                                <exclude reference="Tns-Ml-2NS"/>
+                                <exclude reference="jPF-7i-OG1"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="lblResult" destination="iAK-Wn-f1Q" id="1yR-1y-VgN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="305"/>
         </scene>
     </scenes>
 </document>
