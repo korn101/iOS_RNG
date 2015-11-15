@@ -14,6 +14,7 @@
 		5DAC24B91BF487EA006A8EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAC24B71BF487EA006A8EA8 /* LaunchScreen.storyboard */; };
 		5DAC24C41BF487EA006A8EA8 /* RandomNumberGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC24C31BF487EA006A8EA8 /* RandomNumberGeneratorTests.swift */; };
 		5DAC24CF1BF487EA006A8EA8 /* RandomNumberGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC24CE1BF487EA006A8EA8 /* RandomNumberGeneratorUITests.swift */; };
+		5DCA12781BF8C087009E6FE2 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCA12771BF8C087009E6FE2 /* RandomNumberGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5DAC24CA1BF487EA006A8EA8 /* RandomNumberGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomNumberGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAC24CE1BF487EA006A8EA8 /* RandomNumberGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGeneratorUITests.swift; sourceTree = "<group>"; };
 		5DAC24D01BF487EA006A8EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DCA12771BF8C087009E6FE2 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				5DAC24AE1BF487EA006A8EA8 /* AppDelegate.swift */,
 				5DAC24B01BF487EA006A8EA8 /* ViewController.swift */,
+				5DCA12771BF8C087009E6FE2 /* RandomNumberGenerator.swift */,
 				5DAC24B21BF487EA006A8EA8 /* Main.storyboard */,
 				5DAC24B51BF487EA006A8EA8 /* Assets.xcassets */,
 				5DAC24B71BF487EA006A8EA8 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				5DAC24B11BF487EA006A8EA8 /* ViewController.swift in Sources */,
 				5DAC24AF1BF487EA006A8EA8 /* AppDelegate.swift in Sources */,
+				5DCA12781BF8C087009E6FE2 /* RandomNumberGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +489,7 @@
 				5DAC24D51BF487EA006A8EA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DAC24D61BF487EA006A8EA8 /* Build configuration list for PBXNativeTarget "RandomNumberGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +498,7 @@
 				5DAC24D81BF487EA006A8EA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DAC24D91BF487EA006A8EA8 /* Build configuration list for PBXNativeTarget "RandomNumberGeneratorUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +507,7 @@
 				5DAC24DB1BF487EA006A8EA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
